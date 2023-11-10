@@ -156,4 +156,61 @@ Identifiant du compte2 : Exemple ABC12302012023
 Les deux comptes sont-ils égaux ? False
 Solde total des comptes : 3000.0
 ```
-## Exercice 4
+# Exercice 4 - Classe Movie et Gestion de Films
+
+## Description
+
+Cet exercice implique la création d'une classe `Movie` pour gérer une collection de films. Cette classe gérera les informations des films et interagira avec un fichier JSON pour stocker ces données.
+
+## Objectifs
+
+1. **Classe `Movie`**:
+   - Attributs : titre (string), date de sortie (string au format DD/MM/YYYY), et résumé (string).
+   - Création d'un fichier JSON dans un dossier `data` lors de la première instance de `Movie`, si ce fichier n'existe pas.
+   - Ajout de nouvelles instances de `Movie` dans le fichier JSON.
+   - Méthode pour supprimer un film de la liste dans le fichier JSON.
+   - Méthodes pour modifier le titre, la date de sortie ou le résumé d'un film.
+   - Méthode pour afficher les informations d'un film à partir de son titre.
+
+2. **Application de Terminal**:
+   - Fonctionnalité `create` pour ajouter un nouveau film.
+   - Fonctionnalité `read` pour lire les informations d'un film spécifique ou afficher tous les films par ordre croissant de date de sortie.
+   - Fonctionnalité `update` pour modifier les informations d'un film.
+   - Fonctionnalité `delete` pour supprimer un film.
+   - Les recherches par titre de film fonctionnent indépendamment de la casse.
+   - Les titres de films sont stockés avec une majuscule à chaque mot.
+
+## Exemple de Code
+
+```python
+# Définition de la classe Movie et des méthodes pour gérer le fichier JSON
+...
+
+# Exemples d'utilisation des commandes dans l'application de terminal
+# create, read, update, delete
+...
+```
+##Exemple de sortie attendue
+```python 
+# Après avoir exécuté une commande 'create'
+Liste complète des films après ajout: [...]
+
+# Après avoir exécuté une commande 'read'
+Informations du film recherché: [...]
+
+# Après avoir exécuté une commande 'update'
+Film après modification: [...]
+
+# Après avoir exécuté une commande 'delete'
+Liste complète des films après suppression: [...]
+
+{
+    "movies": [
+        {
+            "titre": "The Dark Knight, Le Chevalier Noir",
+            "date_de_sortie": "13/08/2008",
+            "description": "Dans ce nouveau volet, Batman augmente les mises dans sa guerre contre le crime. Avec l'appui du lieutenant de police Jim Gordon et du procureur de Gotham, Harvey Dent, Batman vise à éradiquer le crime organisé qui pullule dans la ville. Leur association est très efficace mais elle sera bientôt bouleversée par le chaos d'éclenché par un criminel extraordinaire que les citoyens de Gotham connaissent sous le nom de Joker."
+        }
+    ]
+}
+```
