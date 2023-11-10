@@ -47,7 +47,7 @@ This exercise aims to create a `Company` class which will contain basic informat
 # Output: "The company TechCorp, having its head office at 123 Avenue de l'Innovation, 75000 Paris, has the SIRET number 43210987654321"
 ```
 
-#Exercise 2 – DatabaseConnection class with Dataclass
+# Exercise 2 – DatabaseConnection class with Dataclass
 
 ## Description
 
