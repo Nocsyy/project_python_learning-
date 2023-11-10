@@ -47,7 +47,54 @@ Cet exercice a pour but de créer une classe `Entreprise` qui contiendra des inf
   entreprise.siret = "43210987654321"
   print(entreprise) 
 # Sortie: "L'entreprise TechCorp, ayant son siège social au 123 Avenue de l'Innovation, 75000 Paris, possède le numéro de SIRET 43210987654321"
-  
-## Exercice 2
+```
+
+# Exercice 2 - Classe DatabaseConnection avec Dataclass
+
+## Description
+
+Cet exercice consiste à utiliser une `dataclass` pour créer une classe `DatabaseConnection`. Cette classe représente une connexion à une base de données et contient les informations suivantes : type de base de données (MySQL, MariaDB, PostgreSQL, etc.), utilisateur, mot de passe, et hôte. Par défaut, l'hôte est défini sur "localhost".
+
+## Objectifs
+
+1. **Création de la classe `DatabaseConnection`**:
+   - La classe doit être une `dataclass` contenant les attributs suivants :
+     - `type_base` : Type de la base de données (string).
+     - `user` : Nom de l'utilisateur (string).
+     - `password` : Mot de passe (string).
+     - `hote` : Hôte de la base de données (string) avec une valeur par défaut "localhost".
+
+2. **Propriété statique `nb_instances`**:
+   - La classe doit avoir une propriété statique `nb_instances` qui s'incrémente automatiquement à chaque création d'une nouvelle instance.
+
+3. **Méthodes de la classe**:
+   - Une méthode statique pour retourner le nombre total d'instances sous la forme : "La classe DatabaseConnection possède actuellement {x} instance(s)."
+   - Une méthode de classe `create_mariadb_instance` pour créer une instance avec des valeurs prédéfinies.
+
+4. **Tests de la classe**:
+   - Initialiser un objet de cette classe sans spécifier l'hôte et afficher le résultat.
+   - Initialiser un objet en utilisant la méthode `create_mariadb_instance` et afficher le résultat.
+   - Afficher le nombre total d'instances créées.
+
+## Exemple de Code
+
+```python
+from dataclasses import dataclass
+
+@dataclass
+class DatabaseConnection:
+    # Définition de la classe avec les attributs nécessaires
+    ...
+
+# Initialisation et affichage de la première instance
+db_conn1 = DatabaseConnection(type_base="MySQL", user="admin", password="password")
+print(db_conn1)
+
+# Initialisation et affichage de la deuxième instance via la factory
+db_conn2 = DatabaseConnection.create_mariadb_instance()
+print(db_conn2)
+
+# Affichage du nombre total d'instances
+print(DatabaseConnection.get_nb_instance())
 ## Exercice 3
 ## Exercice 4
