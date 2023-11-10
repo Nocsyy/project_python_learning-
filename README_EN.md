@@ -97,11 +97,11 @@ print(DatabaseConnection.get_nb_instance())
 ```
 
 ## Example of expected output
-    ```python
+```python
 DatabaseConnection(base_type='MySQL', user='admin', password='password', host='localhost')
 DatabaseConnection(base_type='mariadb', user='root', password='1234', host='76.287.872.12')
 The DatabaseConnection class currently has 2 instance(s).
-    ````
+````
 
 # Exercise 3 - Customer and Bank Account Classes
 
