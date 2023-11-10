@@ -104,5 +104,56 @@ DatabaseConnection(type_base='MySQL', user='admin', password='password', hote='l
 DatabaseConnection(type_base='mariadb', user='root', password='1234', hote='76.287.872.12')
 La classe DatabaseConnection possède actuellement 2 instance(s).
    ````
-## Exercice 3
+# Exercice 3 - Classes Client et CompteBancaire
+
+## Description
+
+L'objectif de cet exercice est de créer deux classes : `Client` et `CompteBancaire`. La classe `Client` doit contenir des informations personnelles, tandis que `CompteBancaire` doit gérer des informations liées aux comptes bancaires des clients.
+
+## Objectifs
+
+1. **Classe `Client`**:
+   - Attributs : nom, prénom, adresse, numéro de sécurité sociale (NIR) composé de 15 chiffres.
+   - Contrôle du NIR lors de la création de l'objet.
+
+2. **Classe `CompteBancaire`**:
+   - Constructeur acceptant trois paramètres : date de création (string au format "YYYY-MM-DD"), client (de type `Client`), et solde (float).
+   - Quatre propriétés :
+     - Date de création (convertie en format date).
+     - Client (de type `Client`).
+     - Identifiant interne (4 lettres majuscules aléatoires suivies de la date de création au format DDMMYYYY).
+     - Solde (float).
+   - Propriété statique pour la somme des soldes de tous les comptes.
+   - Égalité de deux comptes basée sur l'égalité de leurs soldes.
+
+3. **Tests de la classe `CompteBancaire`**:
+   - Créer deux comptes bancaires.
+   - Afficher leurs identifiants internes.
+   - Vérifier et afficher s'ils sont égaux.
+   - Afficher le solde total de tous les comptes bancaires.
+
+## Exemple de Code
+
+```python
+# Définition des classes Client et CompteBancaire
+...
+
+# Création et affichage des comptes bancaires
+compte1 = CompteBancaire("2023-01-01", client1, 1000.0)
+compte2 = CompteBancaire("2023-01-02", client2, 2000.0)
+
+print(compte1.identifiant)
+print(compte2.identifiant)
+print(compte1 == compte2)
+
+# Affichage du solde total
+print(CompteBancaire.solde_total())
+```
+## Exemple de sortie attendue
+```python
+Identifiant du compte1 : Exemple XYZ12301012023
+Identifiant du compte2 : Exemple ABC12302012023
+Les deux comptes sont-ils égaux ? False
+Solde total des comptes : 3000.0
+```
 ## Exercice 4
