@@ -96,5 +96,13 @@ print(db_conn2)
 
 # Affichage du nombre total d'instances
 print(DatabaseConnection.get_nb_instance())
+```
+
+## Exemple de sortie attendue
+   ```python
+DatabaseConnection(type_base='MySQL', user='admin', password='password', hote='localhost')
+DatabaseConnection(type_base='mariadb', user='root', password='1234', hote='76.287.872.12')
+La classe DatabaseConnection possède actuellement 2 instance(s).
+   ````
 ## Exercice 3
 ## Exercice 4
