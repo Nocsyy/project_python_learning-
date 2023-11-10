@@ -189,7 +189,7 @@ This exercise involves creating a `Movie` class to manage a collection of movies
 # create, read, update, delete
 ...
 ```
-##Example of expected output
+## Example of expected output
 ```python
 # After running a 'create' command
 Complete list of films after addition: [...]
